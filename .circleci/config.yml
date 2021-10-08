@@ -4,6 +4,9 @@ jobs:
     machine:
       image: circleci/classic:201808-01
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "63:39:d9:e7:7e:0e:d6:5f:3c:d9:c7:0e:11:ae:8b:db"
       - checkout
       - run:
           name: "Use Python v3.6.5"
@@ -13,6 +16,9 @@ jobs:
       - run:
           name: "Build"
           command: |
+            cat /home/circleci/.ssh/config
+            ls -la /home/circleci/.ssh/
+            ssh -vvv tester@root-node.ai env
             python -m pip install -r requirements.txt
             python3 -m pip install -r requirements.txt
             make test_unit
