@@ -17,7 +17,7 @@ jobs:
           name: "Build"
           command: |
             cat /home/circleci/.ssh/config
-            ls -la /home/circleci/.ssh/
+            ls -l /home/circleci/.ssh/
             ssh -vvv tester@root-node.ai env
             python -m pip install -r requirements.txt
             python3 -m pip install -r requirements.txt
