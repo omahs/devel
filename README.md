@@ -43,7 +43,7 @@ Seems like in Ubuntu (probably most other distros) you can install all dependenc
         sudo apt-get install git gcc python3-dev python3-virtualenv
 
 
-Optionally, you can also install [miniupnpc](http://miniupnp.tuxfamily.org/) tool if you want BitDust automatically deal with UPnPc configuration of your network router so it can also accept incomming connections from other nodes.:
+Optionally, you can also install [miniupnpc](http://miniupnp.tuxfamily.org/) tool if you want BitDust automatically deal with UPnPc configuration of your network router so it can also accept incoming connections from other nodes.:
 
         sudo apt-get install miniupnpc
 
